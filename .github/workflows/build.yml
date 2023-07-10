@@ -38,6 +38,8 @@ jobs:
         run: |
           go mod tidy
           go test -v ./...
+        env:
+          CGO_ENABLED: 0
 
   release:
     needs: [build]
